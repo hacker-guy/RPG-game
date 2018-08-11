@@ -1,0 +1,19 @@
+
+public class Test {
+	int[] intArr;
+	
+	public Test() {
+		createArray();
+	}
+	
+	public void createArray() {
+		intArr = new int[10];
+	}
+	public void printArray() {
+		
+	}
+	public static void main(String args[]) {
+		Test Test1 = new Test();
+		Test1.printArray();
+	}
+ }

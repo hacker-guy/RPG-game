@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class PriorityQue {
+
+	private class Type {
+		
+	}
+	
+	public PriorityQue() {
+		ArrayList<Type> ArrayL;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

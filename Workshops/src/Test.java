@@ -1,0 +1,24 @@
+
+public class Test {
+	int[] intArr;
+	
+	public Test() {
+		createArray(1,2,3);
+	}
+	
+	public void createArray(int a, int b, int c) {
+		intArr = new int[3];
+		for (int i = 0; i<3; i++) {
+			intArr[i] = 1;
+		}
+	}
+	public void printArray() {
+		for (int i = 0; i<3; i++) {
+			System.out.println(intArr[i]);
+		}
+	}
+	public static void main(String args[]) {
+		Test Test1 = new Test();
+		Test1.printArray();
+	}
+ }

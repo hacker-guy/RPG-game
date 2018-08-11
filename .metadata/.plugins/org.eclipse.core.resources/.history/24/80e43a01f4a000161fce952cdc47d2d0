@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+
+public class PriorityQue<Type> {
+	static int num = 0;
+	private class Info {
+		Type item;
+		int priority;
+		public Info(Type item2, int priority2) {
+			item = item2;
+			priority = priority2;
+			num++;
+		}
+	}
+	
+	private ArrayList<Info> ArrayL;
+	
+	public PriorityQue() {
+		ArrayL = new ArrayList<Info>();
+	}
+	
+	public void add(Type item, int priority) {
+		Info unit = new Info(item, priority);
+		ArrayL.add(unit);
+	}
+	
+	public Type remove() {
+		
+		return null;
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+
+public class PriorityQue<Type> {
+	static int num = 0;
+	private class Info {
+		Type item;
+		int priority;
+		public Info(Type item2, int priority2) {
+			item = item2;
+			priority = priority2;
+			num++;
+		}
+	}
+	
+	private ArrayList<Info> ArrayL;
+	
+	public PriorityQue() {
+		ArrayL = new ArrayList<Info>();
+	}
+	
+	public void add(Type item, int priority) {
+		Info unit = new Info(item, priority);
+		ArrayL.add(unit);
+	}
+	
+	public Type remove() {
+		if (num == 0) {
+			return null;
+		} else {
+			Info info = new Info(null, 0);
+			int i = -1;
+			for(Info it : ArrayL) {
+				if (it.priority > info.priority) {
+					i = it.priority;
+				}
+			}
+			if (i != -1) {
+				info = ArrayL.remove(i);
+			}
+			return info.item;
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		PriorityQue<String> queue = new PriorityQue();
+		queue.add(“X”, 10);
+		queue.add(“Y”, 1);
+		queue.add(“Z”, 3);
+		System.out.println(queue.remove()); // prints X
+		System.out.println(queue.remove()); // prints Z
+		System.out.println(queue.remove()); // prints Y
+
+	}
+
+}

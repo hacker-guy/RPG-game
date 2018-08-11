@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class Workshop7 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please enter the degree of difficulty: ");
+		double diff = input.nextDouble();
+		System.out.println("Please enter seven scores: ");
+		
+		
+	}
+}

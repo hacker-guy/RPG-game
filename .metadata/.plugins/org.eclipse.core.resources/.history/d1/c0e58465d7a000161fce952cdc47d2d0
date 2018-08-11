@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Workshop7 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please enter the degree of difficulty: ");
+		double diff = input.nextDouble();
+		System.out.println("Please enter seven scores: ");
+		int i;
+		double high = 0;
+		double low = 99;
+		double[] scores = new double[7];
+		for (i = 0; i < 7; i++) {
+			scores[i] = input.nextDouble();
+			if (scores[i] > high) {
+				high = scores[i];
+			}
+			if (scores[i] < low) {
+				low = scores[i];
+			}
+		}
+		input.close();
+		double sum = 0;
+		for (i = 0; i < 7; i++) {
+			if (scores[i] != high && scores[i] != low) {
+				sum += scores[i];
+			}
+		}
+		double result = sum*diff;
+		
+		System.out.println("Your score is: " + result);
+	}
+}
